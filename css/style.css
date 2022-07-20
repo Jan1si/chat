@@ -177,14 +177,12 @@
     color: var(--color-title-channels);
 }
 
-.body__list>ul{
+.chats__body{
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.chats__body{
-    margin-bottom: 20px;
-}
 .chat{
     padding: 5px 13px;
     color: var(--color-channel-user);
