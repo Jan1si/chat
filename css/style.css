@@ -26,6 +26,9 @@
     height: 100vh;
     display: flex;
     flex-direction: row;
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .channels{
@@ -35,7 +38,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 40px 15px 15px 15px;
-    background: #000000e6;
+    background: #000000;
+    opacity: 0.7;
     width: fit-content;
 }
 
@@ -80,9 +84,10 @@
 }
 
 .current__channel{
-    width: 300px;
+    min-width: 300px;
     height: inherit;
     background: #25272A;
+    opacity: .75;
     overflow: scroll;
 }
 
@@ -177,8 +182,7 @@
     color: var(--color-title-channels);
 }
 
-.chats__body{
-    margin-bottom: 20px;
+.chats__body>ul,.users__body>ul {
     display: flex;
     flex-direction: column;
 }
@@ -235,4 +239,119 @@
     font-weight: var(--width-regular);
     color: var(--color-channel-user);
     font-size: 15px;
+}
+
+.window__chat{
+    background: white;
+    width: 100%;
+}
+
+.header__window{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.24);
+}
+
+.title__window{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.name__chat>p{
+    font-family: var(--font-lato);
+    font-weight: var(--width-bold);
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.name__chat>p::after{
+    content: url("../img/incons/star.svg");
+    margin-left: 5px;
+}
+
+.tool__bar{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.count__message>p{
+    font-family: var(--font-lato);
+    font-weight: var(--width-regular);
+    font-size: 15px;
+    color: #a4a4a4;
+    display: flex;
+    align-items: center;
+}
+
+.count__message>p::before{
+    content: url("../img/incons/lock.svg");
+    margin-right: 5px;
+}
+
+.btn__tools{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+.btn__tools>span{
+    width:6px;
+    height: 6px;
+    background: #000000;
+    opacity: .3;
+    border-radius: 50%;
+}
+
+.form{
+    width: 240px;
+    margin: 0 25px;
+}
+
+.form__group{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form__group>input{
+    width: 100%;
+    padding: 8px 16px;
+    outline: none;
+    border: 0.5px solid rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+    font-family: var(--font-lato);
+    font-weight: var(--width-regular);
+    font-size: 15px;
+}
+
+.form__group>button{
+    position: absolute;
+    right: 16px;
+    background: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+}
+
+.form__group>img{
+    width: 100%;
+    height: 100%;
+}
+
+.notice{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.notice>img{
+   width: 100%;
+   height: 100%;
 }

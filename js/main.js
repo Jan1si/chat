@@ -57,13 +57,14 @@ const chatsBody = document.querySelector(".chats__body"),
   // Чаты
 function showChats() {
   // Удаление элементов 
-  chatsBody.innerHTML= "";
+  chatsBody.querySelector('ul').innerHTML= "";
   // Заполнение элеметами из бд
   db.chats.forEach(item => {
-    chatsBody.insertAdjacentHTML('beforeend', `<a href="#" class="chat "># ${item}</a>`);
+    chatsBody.querySelector('ul').insertAdjacentHTML('beforeend', `<a href="#" class="chat "># ${item}</a>`);
   });
 } 
 showChats();
+
 
 // Пользователи канала
 function showUsers() {
