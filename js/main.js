@@ -59,8 +59,13 @@ function showChats() {
   // Удаление элементов 
   chatsBody.querySelector('ul').innerHTML= "";
   // Заполнение элеметами из бд
-  db.chats.forEach(item => {
-    chatsBody.querySelector('ul').insertAdjacentHTML('beforeend', `<a href="#" class="chat "># ${item}</a>`);
+  db.chats.forEach((item, i) => {
+    if (i === 0) {
+      chatsBody.querySelector('ul').insertAdjacentHTML('beforeend', `<a href="#" class="chat chat-active"># ${item}</a>`);
+    } else {
+      chatsBody.querySelector('ul').insertAdjacentHTML('beforeend', `<a href="#" class="chat "># ${item}</a>`);
+    }
+
   });
 } 
 showChats();
